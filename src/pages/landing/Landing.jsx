@@ -12,7 +12,7 @@ export default function Landing() {
         <img
           src={`${import.meta.env.BASE_URL}img/landing/main.jpg`}
           alt="TripJ_Img"
-          className="mt-[48px] h-[320px] w-full rounded-xl bg-[#D9D9D9]"
+          className="mt-[24px] h-[260px] w-full rounded-xl bg-[#D9D9D9]"
         />
 
         <section className="mt-[28px] text-center">
