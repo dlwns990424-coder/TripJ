@@ -2,6 +2,8 @@ import { MoreHorizontal } from "lucide-react";
 
 import { useState } from "react";
 
+import useClickOutside from "../../../hooks/useClickOutside";
+
 export default function FavoritePlaceEditMenu({
   isEditMode,
   favoritePlaces,
@@ -13,6 +15,8 @@ export default function FavoritePlaceEditMenu({
   onDeleteAll,
 }) {
   const [isOpen, setIsOpen] = useState(false);
+
+  const menuRef = useClickOutside(isOpen, () => setIsOpen(false));
 
   // ====================
   // Edit Mode
@@ -94,7 +98,7 @@ export default function FavoritePlaceEditMenu({
   // ====================
 
   return (
-    <div className="relative">
+    <div ref={menuRef} className="relative">
       <button
         type="button"
         onClick={() => setIsOpen((prev) => !prev)}

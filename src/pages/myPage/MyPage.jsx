@@ -3,6 +3,8 @@ import { Check, ChevronDown, ChevronUp, Search } from "lucide-react";
 import { useMemo, useState } from "react";
 import { Link } from "react-router-dom";
 
+import useClickOutside from "../../hooks/useClickOutside";
+
 import Header from "../../components/common/Header";
 import BottomNav from "../../components/common/BottomNav";
 
@@ -65,6 +67,8 @@ export default function MyPage() {
   const [sortType, setSortType] = useState("time");
 
   const [isSortOpen, setIsSortOpen] = useState(false);
+
+  const sortMenuRef = useClickOutside(isSortOpen, () => setIsSortOpen(false));
 
   // ====================
   // Edit
@@ -320,7 +324,7 @@ export default function MyPage() {
           className="
             mx-auto
             w-full
-            max-w-[430px]
+            max-w-[390px]
             px-5
             pt-[calc(60px+env(safe-area-inset-top))]
           "
@@ -440,7 +444,7 @@ export default function MyPage() {
             ==================== */}
 
             {!isEditMode && (
-              <div className="relative mt-[2px] flex justify-end">
+              <div ref={sortMenuRef} className="relative mt-[2px] flex justify-end">
                 <button
                   type="button"
                   onClick={() => setIsSortOpen((prev) => !prev)}

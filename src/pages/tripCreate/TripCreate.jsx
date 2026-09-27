@@ -11,6 +11,8 @@ import {
   searchGoogleDestinations,
 } from "../../api/googlePlaceApi";
 
+import { findPopularDestinationImage } from "../../data/popularDestinations";
+
 import { getCurrentUser, saveTrip } from "../../lib/storage";
 
 export default function TripCreate() {
@@ -63,6 +65,8 @@ export default function TripCreate() {
       lat: destinationFromMap.lat ?? null,
 
       lng: destinationFromMap.lng ?? null,
+
+      imageUrl: destinationFromMap.imageUrl || "",
     };
   };
 
@@ -315,27 +319,40 @@ export default function TripCreate() {
 
     try {
       // ====================
-      // Google 대표 이미지
+      // 대표 이미지
       //
-      // 검색에서 받은 Place ID를
-      // 그대로 사용
+      // 1. 인기 여행지에서 바로 선택한 경우
+      //    이미 갖고 있는 이미지 사용
+      // 2. 인기 여행지와 이름이 겹치면
+      //    같은 로컬 이미지 사용
+      //
+      //    (Google Places Photo API가
+      //    사진을 못 내려주는 동안의
+      //    임시 대체 수단)
+      // 3. 그 외에는 Google 대표 이미지 조회
       // ====================
 
       let googleImage = null;
 
-      try {
-        googleImage = await getGooglePlaceImage({
-          placeId:
-            selectedDestination.googlePlaceId || selectedDestination.id || "",
+      const localImageUrl =
+        selectedDestination.imageUrl ||
+        findPopularDestinationImage(selectedDestination.name);
 
-          name: selectedDestination.name,
+      if (!localImageUrl) {
+        try {
+          googleImage = await getGooglePlaceImage({
+            placeId:
+              selectedDestination.googlePlaceId ||
+              selectedDestination.id ||
+              "",
 
-          country: selectedDestination.country,
-        });
-        console.log("선택한 여행지:", selectedDestination);
-        console.log("Google 이미지 결과:", googleImage);
-      } catch (error) {
-        console.error("대표 이미지 조회 오류:", error);
+            name: selectedDestination.name,
+
+            country: selectedDestination.country,
+          });
+        } catch (error) {
+          console.error("대표 이미지 조회 오류:", error);
+        }
       }
 
       // ====================
@@ -384,7 +401,7 @@ export default function TripCreate() {
           selectedDestination.id ||
           "",
 
-        imageUrl: googleImage?.imageUrl || "",
+        imageUrl: localImageUrl || googleImage?.imageUrl || "",
 
         imageAuthorName: googleImage?.imageAuthorName || "",
 

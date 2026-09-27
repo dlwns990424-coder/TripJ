@@ -4,12 +4,39 @@
 
 // ====================
 // Places Library
+//
+// APIProvider의 스크립트 로드는 비동기라
+// 초기 진입 직후 호출되면
+// window.google이 아직 없을 수 있어
+// 로드될 때까지 짧게 대기
 // ====================
 
+const waitForGoogleMaps = (timeout = 8000, interval = 100) => {
+  return new Promise((resolve, reject) => {
+    const startedAt = Date.now();
+
+    const check = () => {
+      if (window.google?.maps?.importLibrary) {
+        resolve();
+
+        return;
+      }
+
+      if (Date.now() - startedAt >= timeout) {
+        reject(new Error("Google Maps JavaScript API가 로드되지 않았습니다."));
+
+        return;
+      }
+
+      setTimeout(check, interval);
+    };
+
+    check();
+  });
+};
+
 const getPlacesLibrary = async () => {
-  if (!window.google || !window.google.maps) {
-    throw new Error("Google Maps JavaScript API가 로드되지 않았습니다.");
-  }
+  await waitForGoogleMaps();
 
   return await window.google.maps.importLibrary("places");
 };

@@ -1,6 +1,8 @@
 import { MoreHorizontal } from "lucide-react";
 import { useState } from "react";
 
+import useClickOutside from "../../hooks/useClickOutside";
+
 export default function TripEditMenu({
   isEditMode,
   trips,
@@ -12,6 +14,8 @@ export default function TripEditMenu({
   onDeleteAll,
 }) {
   const [isOpen, setIsOpen] = useState(false);
+
+  const menuRef = useClickOutside(isOpen, () => setIsOpen(false));
 
   // ====================
   // Edit Mode
@@ -92,7 +96,7 @@ export default function TripEditMenu({
   // ====================
 
   return (
-    <div className="relative flex justify-end">
+    <div ref={menuRef} className="relative flex justify-end">
       <button
         type="button"
         onClick={() => setIsOpen((prev) => !prev)}

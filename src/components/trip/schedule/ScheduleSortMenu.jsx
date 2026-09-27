@@ -2,8 +2,12 @@ import { ChevronDown, Check } from "lucide-react";
 
 import { useState } from "react";
 
+import useClickOutside from "../../../hooks/useClickOutside";
+
 export default function ScheduleSortMenu({ sortType, onChange }) {
   const [isOpen, setIsOpen] = useState(false);
+
+  const menuRef = useClickOutside(isOpen, () => setIsOpen(false));
 
   // ====================
   // Sort Label
@@ -28,7 +32,7 @@ export default function ScheduleSortMenu({ sortType, onChange }) {
   };
 
   return (
-    <div className="relative flex justify-end">
+    <div ref={menuRef} className="relative flex justify-end">
       <button
         type="button"
         onClick={() => setIsOpen((prev) => !prev)}

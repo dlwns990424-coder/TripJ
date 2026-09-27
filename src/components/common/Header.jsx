@@ -16,6 +16,7 @@ export default function Header({
         left-1/2
         z-50
         w-full
+        max-w-[390px]
         -translate-x-1/2
         bg-white
         pt-[env(safe-area-inset-top)]

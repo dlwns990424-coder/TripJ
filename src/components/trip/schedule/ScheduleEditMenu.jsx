@@ -2,6 +2,8 @@ import { MoreHorizontal } from "lucide-react";
 
 import { useState } from "react";
 
+import useClickOutside from "../../../hooks/useClickOutside";
+
 export default function ScheduleEditMenu({
   isEditMode,
   selectedSchedules,
@@ -13,6 +15,8 @@ export default function ScheduleEditMenu({
   onDeleteAll,
 }) {
   const [isOpen, setIsOpen] = useState(false);
+
+  const menuRef = useClickOutside(isOpen, () => setIsOpen(false));
 
   if (isEditMode) {
     return (
@@ -84,7 +88,7 @@ export default function ScheduleEditMenu({
   }
 
   return (
-    <div className="relative mt-[8px] flex justify-end">
+    <div ref={menuRef} className="relative mt-[8px] flex justify-end">
       <button
         type="button"
         onClick={() => setIsOpen((prev) => !prev)}
