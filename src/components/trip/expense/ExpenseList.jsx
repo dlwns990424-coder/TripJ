@@ -138,7 +138,7 @@ export default function ExpenseList({
                       Amount
                   ==================== */}
 
-                  <p className="shrink-0 text-[14px] font-semibold">
+                  <p className="shrink-0 text-[14px] font-normal">
                     {formatMoney(expense.amount, currency)}
                   </p>
                 </div>

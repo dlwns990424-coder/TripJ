@@ -31,7 +31,7 @@ export default function MyTrips({ currentUser, trips }) {
 
             <Link
               to="/trip-create"
-              className="click-scale inline-block text-[16px] font-semibold leading-[24px] text-[#3478F6]"
+              className="click-scale inline-block text-[16px] font-normal leading-[24px] text-[#3478F6]"
             >
               + 여행 만들기
             </Link>

@@ -158,7 +158,7 @@ export default function BudgetModal({
             rounded-xl
             bg-[#3478F6]
             text-[16px]
-            font-semibold
+            font-normal
             text-white
           "
         >

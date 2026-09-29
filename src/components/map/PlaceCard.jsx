@@ -462,7 +462,7 @@ export default function PlaceCard({
             <button
               type="button"
               onClick={handleScheduleClick}
-              className="click-scale flex h-[36px] items-center justify-center rounded-full bg-[#3478F6] px-[18px] text-[13px] text-white"
+              className="click-scale flex h-[36px] items-center justify-center rounded-full bg-[#3478F6] px-[18px] text-[13px] font-normal text-white"
             >
               일정 추가
             </button>
@@ -472,7 +472,7 @@ export default function PlaceCard({
             <button
               type="button"
               onClick={handleFavoriteClick}
-              className="click-scale flex h-[36px] items-center justify-center rounded-full bg-[#3478F6] px-[18px] text-[13px] text-white"
+              className="click-scale flex h-[36px] items-center justify-center rounded-full bg-[#3478F6] px-[18px] text-[13px] font-normal text-white"
             >
               관심 장소 추가
             </button>
@@ -482,7 +482,7 @@ export default function PlaceCard({
             <button
               type="button"
               onClick={handleAccommodationClick}
-              className="click-scale flex h-[36px] items-center justify-center rounded-full bg-[#3478F6] px-[18px] text-[13px] text-white"
+              className="click-scale flex h-[36px] items-center justify-center rounded-full bg-[#3478F6] px-[18px] text-[13px] font-normal text-white"
             >
               숙소로 지정
             </button>
@@ -492,7 +492,7 @@ export default function PlaceCard({
             <button
               type="button"
               onClick={handleFavoriteClick}
-              className="click-scale flex h-[36px] items-center justify-center rounded-full bg-[#3478F6] px-[18px] text-[13px] text-white"
+              className="click-scale flex h-[36px] items-center justify-center rounded-full bg-[#3478F6] px-[18px] text-[13px] font-normal text-white"
             >
               관심 장소 추가
             </button>

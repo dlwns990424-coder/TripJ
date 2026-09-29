@@ -220,7 +220,7 @@ export default function AccommodationSelectModal({
                       className="
                           truncate
                           text-[15px]
-                          font-semibold
+                          font-normal
                           leading-[22px]
                         "
                     >

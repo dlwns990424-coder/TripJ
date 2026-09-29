@@ -198,7 +198,7 @@ function ScheduleDateModal({ isOpen, trip, onClose, onSelect }) {
                 className="click-scale flex w-full items-center justify-between rounded-xl border border-[#D9D9D9] bg-white px-[14px] py-[12px] text-left"
               >
                 <div>
-                  <p className="text-[14px] font-semibold leading-[20px]">
+                  <p className="text-[14px] font-normal leading-[20px]">
                     Day {index + 1}
                   </p>
                   <p className="mt-[2px] text-[13px] leading-[18px] text-[#555555]">

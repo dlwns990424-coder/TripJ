@@ -140,7 +140,7 @@ export default function TripSelectModal({ isOpen, trips, onClose, onSelect }) {
                   className="
                     truncate
                     text-[16px]
-                    font-semibold
+                    font-normal
                     leading-[24px]
                   "
                 >

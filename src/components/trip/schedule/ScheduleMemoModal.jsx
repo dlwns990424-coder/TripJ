@@ -250,7 +250,7 @@ export default function ScheduleMemoModal({
               border-[#D9D9D9]
               bg-white
               text-[14px]
-              font-semibold
+              font-normal
               text-[#555555]
             "
           >
@@ -270,7 +270,7 @@ export default function ScheduleMemoModal({
               rounded-xl
               bg-[#3478F6]
               text-[14px]
-              font-semibold
+              font-normal
               text-white
             "
           >

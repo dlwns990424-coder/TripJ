@@ -248,7 +248,7 @@ export default function TripHero({
               w-full
               text-center
               text-[18px]
-              font-semibold
+              font-normal
               leading-[26px]
               tracking-[-0.02em]
             "

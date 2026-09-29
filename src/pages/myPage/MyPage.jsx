@@ -383,7 +383,7 @@ export default function MyPage() {
                 className="
                   text-left
                   text-[18px]
-                  font-semibold
+                  font-normal
                   leading-[27px]
                   tracking-[-0.01em]
                 "

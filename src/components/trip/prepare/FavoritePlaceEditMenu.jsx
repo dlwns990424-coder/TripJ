@@ -56,7 +56,7 @@ export default function FavoritePlaceEditMenu({
               rounded-xl
               border
               text-[14px]
-              font-semibold
+              font-normal
 
               ${
                 selectedPlaceIds.length > 0
@@ -82,7 +82,7 @@ export default function FavoritePlaceEditMenu({
               rounded-xl
               bg-[#3478F6]
               text-[14px]
-              font-semibold
+              font-normal
               text-white
             "
           >

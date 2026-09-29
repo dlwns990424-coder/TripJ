@@ -49,7 +49,7 @@ export default function ScheduleSortMenu({ sortType, onChange }) {
       >
         <span>정렬 기준</span>
 
-        <strong className="font-semibold text-[#191919]">
+        <strong className="font-normal text-[#191919]">
           {getSortLabel()}
         </strong>
 

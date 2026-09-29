@@ -6,11 +6,11 @@ export default function MainHeader() {
   return (
     <Header
       left={
-        <Link to="/home">
+        <Link to="/home" aria-label="TripJ 홈" className="flex min-h-[44px] items-center">
           <img
-            className="w-[100px]"
-            src={`${import.meta.env.BASE_URL}img/logo/logo.png`}
-            alt="Logo"
+            className="block h-auto w-[100px] object-contain"
+            src={`${import.meta.env.BASE_URL}img/logo/tripj-wordmark.svg`}
+            alt="TripJ" width={408} height={172}
           />
         </Link>
       }

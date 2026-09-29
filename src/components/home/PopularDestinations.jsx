@@ -140,7 +140,7 @@ export default function PopularDestinations() {
                 left-[12px]
                 z-10
                 text-[16px]
-                font-semibold
+                font-normal
                 leading-[24px]
                 text-white
               "

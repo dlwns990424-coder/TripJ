@@ -124,7 +124,7 @@ export default function ConfirmModal({
                 border-[#D9D9D9]
                 bg-white
                 text-[16px]
-                font-semibold
+                font-normal
                 leading-[24px]
                 text-[#555555]
               "
@@ -148,7 +148,7 @@ export default function ConfirmModal({
                 justify-center
                 rounded-xl
                 text-[16px]
-                font-semibold
+                font-normal
                 leading-[24px]
                 text-white
 
@@ -173,7 +173,7 @@ export default function ConfirmModal({
               rounded-xl
               bg-[#3478F6]
               text-[16px]
-              font-semibold
+              font-normal
               leading-[24px]
               text-white
             "

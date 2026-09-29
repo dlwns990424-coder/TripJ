@@ -46,9 +46,9 @@ export default function Login() {
           className="click-scale text-center text-[28px] font-bold leading-[36px] tracking-[-0.02em]"
         >
           <img
-            className="w-[180px] m-auto my-0"
-            src={`${import.meta.env.BASE_URL}img/logo/logo.png`}
-            alt="Logo"
+            className="mx-auto block h-auto w-[180px] max-w-full shrink-0 object-contain"
+            src={`${import.meta.env.BASE_URL}img/logo/tripj-wordmark.svg`}
+            alt="TripJ" width={408} height={172}
           />
         </Link>
 
@@ -99,7 +99,7 @@ export default function Login() {
 
             <button
               type="submit"
-              className="click-scale mt-[16px] flex h-[52px] w-full items-center justify-center rounded-xl bg-[#3478F6] text-[16px] font-semibold leading-[24px] text-white"
+              className="click-scale mt-[16px] flex h-[52px] w-full items-center justify-center rounded-xl bg-[#3478F6] text-[16px] font-normal leading-[24px] text-white"
             >
               로그인
             </button>

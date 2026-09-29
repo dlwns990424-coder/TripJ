@@ -161,7 +161,7 @@ export default function FavoriteAddSuccessModal({
             rounded-xl
             bg-[#3478F6]
             text-[15px]
-            font-semibold
+            font-normal
             text-white
           "
         >

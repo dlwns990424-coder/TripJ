@@ -51,7 +51,7 @@ export default function TripDetailTabs({
             relative
             h-[48px]
             text-[16px]
-            font-semibold
+            font-normal
             leading-[24px]
             transition-colors
             duration-200

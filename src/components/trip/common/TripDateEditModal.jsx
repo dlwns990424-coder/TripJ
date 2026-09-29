@@ -220,7 +220,7 @@ export default function TripDateEditModal({ isOpen, trip, onClose, onSave }) {
             justify-center
             rounded-xl
             text-[16px]
-            font-semibold
+            font-normal
             leading-[24px]
             text-white
 

@@ -5,9 +5,11 @@ export default function Landing() {
     <main className="min-h-dvh bg-white px-5 pt-[calc(40px+env(safe-area-inset-top))] pb-[calc(40px+env(safe-area-inset-bottom))] text-[#191919]">
       <div className="mx-auto flex min-h-[calc(100dvh-80px)] w-full max-w-[390px] flex-col">
         <img
-          src={`${import.meta.env.BASE_URL}img/logo/logo.png`}
-          alt="TripJ_logo"
-          className="w-[180px] object-contain m-auto my-0"
+          src={`${import.meta.env.BASE_URL}img/logo/tripj-wordmark.svg`}
+          alt="TripJ"
+          width={408}
+          height={172}
+          className="mx-auto block h-auto w-[180px] max-w-full shrink-0 object-contain"
         />
         <img
           src={`${import.meta.env.BASE_URL}img/landing/main.jpg`}
@@ -30,7 +32,7 @@ export default function Landing() {
         <div className="mt-auto">
           <Link
             to="/signup"
-            className="click-scale flex h-[52px] w-full items-center justify-center rounded-xl bg-[#3478F6] text-[16px] font-semibold leading-[24px] text-white"
+            className="click-scale flex h-[52px] w-full items-center justify-center rounded-xl bg-[#3478F6] text-[16px] leading-[24px] text-white"
           >
             회원가입
           </Link>

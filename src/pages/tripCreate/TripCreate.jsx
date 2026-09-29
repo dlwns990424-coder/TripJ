@@ -594,7 +594,7 @@ export default function TripCreate() {
                           className="
                                 truncate
                                 text-[14px]
-                                font-semibold
+                                font-normal
                                 leading-[20px]
                               "
                         >
@@ -751,7 +751,7 @@ export default function TripCreate() {
                   justify-center
                   rounded-xl
                   text-[16px]
-                  font-semibold
+                  font-normal
                   text-white
 
                   ${

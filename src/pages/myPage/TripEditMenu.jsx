@@ -54,7 +54,7 @@ export default function TripEditMenu({
               rounded-xl
               border
               text-[14px]
-              font-semibold
+              font-normal
 
               ${
                 selectedTripIds.length > 0
@@ -80,7 +80,7 @@ export default function TripEditMenu({
               rounded-xl
               bg-[#3478F6]
               text-[14px]
-              font-semibold
+              font-normal
               text-white
             "
           >

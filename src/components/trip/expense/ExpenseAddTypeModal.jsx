@@ -90,7 +90,7 @@ export default function ExpenseAddTypeModal({
             "
           >
             <div>
-              <p className="text-[15px] font-semibold">일정에서 지출 추가</p>
+              <p className="text-[15px] font-normal">일정에서 지출 추가</p>
 
               <p className="mt-[2px] text-[12px] text-[#888888]">
                 선택한 Day의 일정에 지출을 기록해요.
@@ -126,7 +126,7 @@ export default function ExpenseAddTypeModal({
             "
           >
             <div>
-              <p className="text-[15px] font-semibold">기타 지출 추가</p>
+              <p className="text-[15px] font-normal">기타 지출 추가</p>
 
               <p className="mt-[2px] text-[12px] text-[#888888]">
                 일정과 관계없는 지출을 기록해요.

@@ -215,7 +215,7 @@ export default function MapHeader({
                       className="
                         truncate
                         text-[14px]
-                        font-semibold
+                        font-normal
                         leading-[20px]
                       "
                     >
